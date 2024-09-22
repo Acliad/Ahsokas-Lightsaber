@@ -4,7 +4,7 @@
 <div style="clear: both;"></div>
 
 <figure style="float: right; margin-left: 25px; width: 200px;">
-  <img src="./Reference Images/V1 Build View 1.png" alt="Image of Lightsaber V1" width="200px"/>
+  <img align="right" src="./Reference Images/V1 Build View 1.png" alt="Image of Lightsaber V1" width="200px"/>
   <figcaption>First complete build (minus brass contacts)</figcaption>
 </figure>
 
