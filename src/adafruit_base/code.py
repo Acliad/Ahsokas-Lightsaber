@@ -1,11 +1,7 @@
 # SPDX-FileCopyrightText: 2023 Liz Clark for Adafruit Industries
 #
 # SPDX-License-Identifier: MIT
-import os
-import random
-import board
-import pwmio
-import audiocore
+import board # type: ignore
 import audiobusio
 import rotaryio
 import alarm
@@ -16,26 +12,29 @@ from adafruit_debouncer import Button
 from digitalio import DigitalInOut, Direction, Pull
 import neopixel
 import adafruit_lis3dh
-import simpleio
-import re
 from blade import Blade
 
 # CUSTOMIZE SENSITIVITY HERE: smaller numbers = more sensitive to motion
 ENCODER_SENSITIVITY = 0.01
 HIT_THRESHOLD = 120
 SWING_THRESHOLD = 145
+VOLUME_MODE_COLOR = (255, 100, 0)
 
-DEFAULT_BLADE_COLOR = (0, 125, 255) # Cyan
+DEFAULT_BLADE_COLOR = (0, 100, 255) # Cyan
 DEFAULT_VOLUME = 1.0
 
 # The time the lightsaber is in off mode before going to deep sleep
 SLEEP_TIMEOUT_TIME_SECONDS = 10*60
+
+# The amount of time to debounce button presses
+BUTTON_DEBOUNCE_TIME_S = 0.035
 
 # Load settings
 blade_settings = saber_settings.SaberSettings("/settings.json")
 # Ensure defaults are set (this should probably be done in the settings class with an optional defaults dict)
 if blade_settings.blade_color is None:
     blade_settings.blade_color = DEFAULT_BLADE_COLOR
+# TODO: Volume not yet implemented
 if blade_settings.volume is None:
     blade_settings.volume = DEFAULT_VOLUME
 # Values need to be normalized for colorsys
@@ -63,7 +62,7 @@ audio = audiobusio.I2SOut(board.I2S_BIT_CLOCK, board.I2S_WORD_SELECT, board.I2S_
 power_btn_pin = DigitalInOut(board.D13)
 power_btn_pin.direction = Direction.INPUT
 power_btn_pin.pull = Pull.UP
-switch = Button(power_btn_pin, short_duration_ms = 10, long_duration_ms = 1000)
+switch = Button(power_btn_pin, short_duration_ms = 20, long_duration_ms = 1000, interval = BUTTON_DEBOUNCE_TIME_S)
 
 # Rotary encoder
 encoder = rotaryio.IncrementalEncoder(board.D12, board.D11)
@@ -107,11 +106,31 @@ def animate_sat_config():
         sat_delta += ENCODER_SENSITIVITY
         time.sleep(0.001)
 
-time_turned_off = 0
-mode = 'startup' # Default to startup
-config_pages = ['hue', 'saturation']
+def animate_volume_config():
+    # Linearly inerpolate between the current color and VOLUME_MODE_COLOR
+    step_size = 50 # Number of steps to take to get to the final color
+    temp_color = blade.color
+    slopes = [(VOLUME_MODE_COLOR[i] - temp_color[i]) / step_size for i in range(3)]
+    while [round(c) for c in temp_color] != list(VOLUME_MODE_COLOR):
+        temp_color = [min(max(temp_color[i] + slopes[i], 0), 255) for i in range(3)]
+        blade.color = [round(c) for c in temp_color]
+        blade.update()
+        # time.sleep(0.001)
+
+time_turned_off = time.monotonic()
+config_pages = ['hue', 'saturation', 'volume']
 active_config_page = config_pages[0]
 last_config_page = None
+
+# Track the state of the state machine. Modes are:
+#   - startup: The lightsaber is starting up
+#   - run: The lightsaber is running normally
+#   - shutdown: The lightsaber is shutting down
+#   - retracted: The lightsaber is retracted but can be turned on
+#   - off: The lightsaber is off and can go to sleep. Requires a long press to turn on
+#   - config: The lightsaber is in configuration mode
+
+mode = 'off' # Default to startup
 while True:
     switch.update()
     blade.update()
@@ -136,14 +155,20 @@ while True:
     # turn off
     elif mode == 'shutdown':
         blade.shutdown()
-        mode = 'off'
+        mode = 'retracted'
         time_turned_off = time.monotonic()
-    # go to startup from off if button is pressed
-    elif mode == 'off':
+    # go to startup from retracted if button is pressed
+    elif mode == 'retracted':
         if switch.short_count > 0:
             external_power.value = True
             mode = 'startup'
-        elif blade.num_pixels_on == 0 and (time.monotonic() - time_turned_off) > SLEEP_TIMEOUT_TIME_SECONDS:
+    # go to sleep
+    elif mode == 'off':
+        # From off mode, we want require a long press to turn the saber back on
+        if switch.long_press:
+            mode = 'startup'
+        # Go to sleep if the saber has been off for a while
+        if time.monotonic() - time_turned_off > SLEEP_TIMEOUT_TIME_SECONDS:
             print("Going to sleep...")
             external_power.value = False
             # Set up the sleep alarm
@@ -151,7 +176,7 @@ while True:
             edge_alarm = alarm.pin.PinAlarm(board.D13, value=False, pull=True)
             alarm.exit_and_deep_sleep_until_alarms(edge_alarm)
 
-    # change color
+    # config state
     elif mode == 'config':
         encoder_increment = get_encoder_delta() * ENCODER_SENSITIVITY
         if active_config_page == 'hue':
@@ -166,15 +191,30 @@ while True:
                 animate_sat_config()
             
             if encoder_increment:
-                blade_hsv[1] = min(max(blade_hsv[1] + encoder_increment, 0), 1)
+                # Saturation of 0 causes the blade to turn off. Set minimum to 0.01
+                blade_hsv[1] = min(max(blade_hsv[1] + encoder_increment, 0.01), 1)
                 blade.color = colorsys.hsv_to_rgb(blade_hsv[0], blade_hsv[1], blade_hsv[2])
+        elif active_config_page == 'volume':
+            if last_config_page != active_config_page:
+                animate_volume_config()
+            if encoder_increment:
+                # TODO: implement volume control. I know that this is currenlty bad practice because they name doesn't
+                # quite match the function. It will be fixed (or rather completely replaced) in a future commit.
+                # Making blade_volume a float just so the rest of the code is consistent with volume being a float
+                blade_volume = float(not blade.muted) 
+                blade.muted = blade_volume
+
         last_config_page = active_config_page
         
         if switch.long_press:
             # Save the updated settings
-            blade_settings.blade_color = blade.color
+            blade.color = colorsys.hsv_to_rgb(blade_hsv[0], blade_hsv[1], blade_hsv[2])
+            blade_settings.blade_color = colorsys.hsv_to_rgb(blade_hsv[0], blade_hsv[1], blade_hsv[2])
             blade_settings.volume = blade_volume
-            blade_settings.save_settings()
+            try:
+                blade_settings.save_settings()
+            except RuntimeError as e:
+                print("Error saving settings. Cannot save while mounted as a drive.\n", e)
             active_config_page = 'hue'
             last_config_page = None
             blade.mode = 'run'
