@@ -130,7 +130,7 @@ last_config_page = None
 #   - off: The lightsaber is off and can go to sleep. Requires a long press to turn on
 #   - config: The lightsaber is in configuration mode
 
-mode = 'off' # Default to startup
+mode = 'off' # Default to off
 while True:
     switch.update()
     blade.update()
@@ -162,6 +162,9 @@ while True:
         if switch.short_count > 0:
             external_power.value = True
             mode = 'startup'
+        # Turn off if the saber has been retracted for a while
+        if time.monotonic() - time_turned_off > SLEEP_TIMEOUT_TIME_SECONDS:
+            mode = 'off'
     # go to sleep
     elif mode == 'off':
         # From off mode, we want require a long press to turn the saber back on
