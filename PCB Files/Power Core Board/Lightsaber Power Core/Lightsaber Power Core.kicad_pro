@@ -471,14 +471,13 @@
         "bus_width": 12,
         "clearance": 0.6,
         "diff_pair_gap": 0.0,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.0,
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "50Ohm",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
+        "priority": 2,
         "schematic_color": "rgb(0, 182, 182)",
         "track_width": 0.3,
         "via_diameter": 0.7,
@@ -489,14 +488,13 @@
         "bus_width": 12,
         "clearance": 0.0,
         "diff_pair_gap": 0.102,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.175,
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "90Ohm Diff",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
+        "priority": 3,
         "schematic_color": "rgb(154, 61, 186)",
         "track_width": 0.0,
         "via_diameter": 0.7,
@@ -507,14 +505,13 @@
         "bus_width": 12,
         "clearance": 0.15,
         "diff_pair_gap": 0.0,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.0,
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "GND",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2,
+        "priority": 4,
         "schematic_color": "rgb(132, 132, 132)",
         "track_width": 0.15,
         "via_diameter": 0.8,
@@ -522,17 +519,28 @@
         "wire_width": 6
       },
       {
+        "name": "POWER_100mA",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgb(128, 77, 0)"
+      },
+      {
+        "name": "POWER_10A",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgb(194, 0, 0)"
+      },
+      {
         "bus_width": 12,
         "clearance": 0.15,
         "diff_pair_gap": 0.0,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.0,
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
-        "name": "Power",
+        "name": "POWER_1A",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 3,
+        "priority": 5,
         "schematic_color": "rgb(221, 133, 0)",
         "track_width": 0.15,
         "via_diameter": 0.8,
@@ -543,15 +551,14 @@
         "bus_width": 12,
         "clearance": 0.15,
         "diff_pair_gap": 0.0,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.0,
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "Speaker",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 4,
-        "schematic_color": "rgb(194, 194, 0)",
+        "priority": 6,
+        "schematic_color": "rgb(194, 0, 194)",
         "track_width": 0.15,
         "via_diameter": 0.7,
         "via_drill": 0.3,
@@ -562,51 +569,59 @@
       "version": 4
     },
     "net_colors": null,
-    "netclass_assignments": null,
+    "netclass_assignments": {
+      "/VBAT_LED_SW": [
+        "POWER_10A"
+      ]
+    },
     "netclass_patterns": [
       {
         "netclass": "90Ohm Diff",
         "pattern": "*_D?"
       },
       {
-        "netclass": "Power",
-        "pattern": "VEXT"
+        "netclass": "POWER_1A",
+        "pattern": "VBUS"
       },
       {
-        "netclass": "Power",
-        "pattern": "*?.?V"
+        "netclass": "POWER_100mA",
+        "pattern": "3.3V"
       },
       {
         "netclass": "GND",
         "pattern": "GND"
       },
       {
-        "netclass": "Power",
+        "netclass": "POWER_1A",
         "pattern": "VBAT"
       },
       {
-        "netclass": "Power",
+        "netclass": "POWER_1A",
         "pattern": "VSYS"
       },
       {
-        "netclass": "Power",
+        "netclass": "POWER_1A",
         "pattern": "*5.0V_SW"
       },
       {
-        "netclass": "Power",
-        "pattern": "/VDDA"
+        "netclass": "POWER_100mA",
+        "pattern": "*/VDDA"
       },
       {
-        "netclass": "Power",
-        "pattern": "/5.0V_SWITCHED"
+        "netclass": "POWER_1A",
+        "pattern": "5.0V"
       },
       {
         "netclass": "Speaker",
-        "pattern": "*SPK?"
+        "pattern": "*/SPK?"
       },
       {
-        "netclass": "Power",
-        "pattern": "/VDDUSB"
+        "netclass": "POWER_100mA",
+        "pattern": "*/VDDUSB"
+      },
+      {
+        "netclass": "POWER_10A",
+        "pattern": "VBAT_LED"
       }
     ]
   },
@@ -723,7 +738,7 @@
           "group_by": false,
           "label": "MPN",
           "name": "MPN",
-          "show": false
+          "show": true
         }
       ],
       "filter_string": "",
@@ -731,7 +746,7 @@
       "include_excluded_from_bom": false,
       "name": "",
       "sort_asc": true,
-      "sort_field": "Description"
+      "sort_field": "Reference"
     },
     "connection_grid_size": 50.0,
     "drawing": {
@@ -781,7 +796,14 @@
     [
       "edf70b75-8609-4ebb-b0e3-841edf5227ef",
       "Power"
+    ],
+    [
+      "448ac653-b8df-4b25-a15f-6d3f3b43abc7",
+      "MCU & Peripheral"
     ]
   ],
-  "text_variables": {}
+  "text_variables": {
+    "REV_BRD": "0",
+    "REV_SCH": "0"
+  }
 }

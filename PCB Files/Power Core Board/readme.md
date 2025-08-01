@@ -2,18 +2,18 @@ This board contains all the control and driver circuitry for the lightsaber's po
 
 - Uses an STM32L4 instead of a RP2040
 - Uses a 6-axis IMU instead of a 3-axis accelerometer
-- Contains a 5V boost converter to power the LEDs at full brightness across battery voltage
+- Contains a 5V boost converter to power the audio amplifier
+- Designed for ultra low power shutdown mode to allow months or years of standby time
 
 ## Requirements
 The Power Core board main requirements are:
 
 - Contains >= 100MB of onboard storage
 - Powered from a single-cell lithium-ion battery
-    - Battery connector compatible with JST-PH
 - USB-C charging and power from USB-C when connected
 - USB-C data connection to the MCU
 - 6-axis IMU for motion detection
-- 5V boost converter to power the LEDs at full brightness across battery voltage
+- 5V boost converter to power the audio amplifier
 - 3.3V regulator to power the MCU and connected peripherals
 - ~3W audio amplifier
 - Terminal block for easy connection to the LED strip and speaker
@@ -21,7 +21,7 @@ The Power Core board main requirements are:
 - Measurement of battery voltage
 
 ## Main Component Selection
-- MCU: [STM32L431RC](https://www.st.com/content/ccc/resource/technical/document/datasheet/group3/83/b3/60/f6/b1/cc/47/7e/DM00257211/files/DM00257211.pdf/jcr:content/translations/en.DM00257211.pdf) (64-pin LQFP, 80MHz, 256KB Flash, 64KB RAM)
+- MCU: [STM32L452CC](https://www.st.com/resource/en/datasheet/stm32l452cc.pdf) (48-pin LQFP, 80MHz, 256KB Flash, 160KB RAM, USB)
 - Flash: [W25N01GV](https://www.winbond.com/resource-files/w25n01gv%20revl%20050918%20unsecured.pdf) (1Gb, QSPI)
 - IMU: [LSM6DSR](https://www.st.com/resource/en/datasheet/lsm6dsr.pdf) (Accelerometer + Gyroscope)
 - Audio Amplifier: [MAX98357](https://www.analog.com/media/en/technical-documentation/data-sheets/max98357a-max98357b.pdf) (3.2W @ 4Ω)
