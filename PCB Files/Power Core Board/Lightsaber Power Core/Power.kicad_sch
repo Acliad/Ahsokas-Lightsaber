@@ -1720,6 +1720,107 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:PWR_FLAG"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "3.3V Regulator"
 		(exclude_from_sim no)
@@ -1913,7 +2014,7 @@
 	)
 	(text_box "Designed for ~1A out, probably can support ~2A. "
 		(exclude_from_sim no)
-		(at 175.006 72.898 0)
+		(at 163.83 59.69 0)
 		(size 19.05 7.112)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -2154,12 +2255,6 @@
 		(uuid "2082f731-923f-409d-b293-10643846f2d9")
 	)
 	(junction
-		(at 45.72 69.85)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "26777581-bcec-419d-8eb6-3c5cd4860fda")
-	)
-	(junction
 		(at 336.55 118.11)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2208,6 +2303,12 @@
 		(uuid "ac2b1c70-a574-4f79-8658-f48ff98ba372")
 	)
 	(junction
+		(at 172.72 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ae34cbc6-90f6-417e-ba1d-84464c94cb86")
+	)
+	(junction
 		(at 78.74 151.13)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2250,6 +2351,12 @@
 		(uuid "f07ebd8b-e52c-4fc9-a892-b85df0491b3c")
 	)
 	(junction
+		(at 287.02 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f1bd7e3d-6912-46ea-a381-dd7f4cbda85d")
+	)
+	(junction
 		(at 73.66 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2287,16 +2394,6 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 78.74) (xy 45.72 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0a357282-aff5-4bfe-89d2-702cf446a172")
-	)
-	(wire
-		(pts
 			(xy 142.24 80.01) (xy 153.67 80.01)
 		)
 		(stroke
@@ -2324,6 +2421,16 @@
 			(type default)
 		)
 		(uuid "17f0f5b3-52f9-4e84-a49c-0e6963f47122")
+	)
+	(wire
+		(pts
+			(xy 172.72 76.2) (xy 172.72 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e731d7f-2afb-4352-8122-bea404abb890")
 	)
 	(wire
 		(pts
@@ -2374,16 +2481,6 @@
 			(type default)
 		)
 		(uuid "28e1b24a-ddb7-4ed2-bcf0-ecc6acc47cde")
-	)
-	(wire
-		(pts
-			(xy 45.72 69.85) (xy 58.42 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "29e27b5a-ae78-4085-b82c-31113d07dd77")
 	)
 	(wire
 		(pts
@@ -2597,6 +2694,16 @@
 	)
 	(wire
 		(pts
+			(xy 127 144.78) (xy 127 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c8ffafb-a9dc-4a42-bfa4-db2b679310ef")
+	)
+	(wire
+		(pts
 			(xy 368.3 71.12) (xy 368.3 76.2)
 		)
 		(stroke
@@ -2657,16 +2764,6 @@
 	)
 	(wire
 		(pts
-			(xy 127 147.32) (xy 127 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6a82e5f1-f820-41b8-9114-9bb2495f5c5a")
-	)
-	(wire
-		(pts
 			(xy 336.55 118.11) (xy 336.55 120.65)
 		)
 		(stroke
@@ -2694,6 +2791,16 @@
 			(type default)
 		)
 		(uuid "732e9abc-6c73-4d2a-88a9-522a31202cbb")
+	)
+	(wire
+		(pts
+			(xy 175.26 76.2) (xy 172.72 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7471fe0c-d041-46db-8faf-4ee24964b291")
 	)
 	(wire
 		(pts
@@ -2777,7 +2884,7 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 73.66) (xy 172.72 80.01)
+			(xy 172.72 73.66) (xy 172.72 76.2)
 		)
 		(stroke
 			(width 0)
@@ -2854,6 +2961,16 @@
 			(type default)
 		)
 		(uuid "966c10f9-da23-4c57-a060-4fa9ba6dcbc1")
+	)
+	(wire
+		(pts
+			(xy 270.51 64.77) (xy 270.51 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b1f3a1e-0af2-4a78-8c01-54a970daa5b5")
 	)
 	(wire
 		(pts
@@ -2937,6 +3054,16 @@
 	)
 	(wire
 		(pts
+			(xy 270.51 54.61) (xy 287.02 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aac84452-932b-45cc-b0ef-6bef5a02cb15")
+	)
+	(wire
+		(pts
 			(xy 353.06 76.2) (xy 353.06 78.74)
 		)
 		(stroke
@@ -3014,16 +3141,6 @@
 			(type default)
 		)
 		(uuid "c0dba383-8a00-4f1c-9713-79f1be70fd2d")
-	)
-	(wire
-		(pts
-			(xy 45.72 69.85) (xy 45.72 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c2299221-c22b-460b-9913-aab7b8275968")
 	)
 	(wire
 		(pts
@@ -3127,7 +3244,17 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 57.15) (xy 45.72 69.85)
+			(xy 270.51 57.15) (xy 270.51 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e335550b-2831-4134-9a34-a4ddacdbf384")
+	)
+	(wire
+		(pts
+			(xy 58.42 57.15) (xy 58.42 69.85)
 		)
 		(stroke
 			(width 0)
@@ -3269,6 +3396,73 @@
 		(uuid "ce1aa6e8-cdb8-405f-8af6-21daa60338ca")
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 175.26 76.2 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1eabd7d9-93c8-42f3-87ef-c61182559983")
+		(property "Reference" "#FLG0201"
+			(at 177.165 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 178.054 76.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 175.26 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 175.26 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 175.26 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "41331318-166c-4b07-aeb9-409fc1c42995")
+		)
+		(instances
+			(project "Lightsaber Power Core"
+				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
+					(reference "#FLG0201")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 107.95 163.83 0)
 		(unit 1)
@@ -3277,7 +3471,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "21651aef-5e35-4887-8288-a7cb41e01f02")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR0223"
 			(at 107.95 170.18 0)
 			(effects
 				(font
@@ -3327,7 +3521,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR024")
+					(reference "#PWR0223")
 					(unit 1)
 				)
 			)
@@ -3342,7 +3536,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "216fbd24-58a1-407c-ad8b-a10c12379110")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR0204"
 			(at 287.02 73.66 0)
 			(effects
 				(font
@@ -3392,7 +3586,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR012")
+					(reference "#PWR0204")
 					(unit 1)
 				)
 			)
@@ -3408,7 +3602,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "269ad95b-d72f-4663-82e3-d6d3f59b8513")
-		(property "Reference" "R?"
+		(property "Reference" "R207"
 			(at 92.71 156.718 90)
 			(effects
 				(font
@@ -3424,7 +3618,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 92.456 152.654 90)
 			(effects
 				(font
@@ -3433,7 +3627,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://lcsc.com/datasheet/lcsc_datasheet_2506161055_YAGEO-RC0402JR-071ML_C93949.pdf"
 			(at 92.71 153.67 0)
 			(effects
 				(font
@@ -3451,6 +3645,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC PN" "C93949"
+			(at 92.71 153.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402JR-071ML"
+			(at 92.71 153.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3a2cd2d4-09e6-4644-8c4b-179d7b9b76e3")
 		)
@@ -3460,7 +3672,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "R?")
+					(reference "R207")
 					(unit 1)
 				)
 			)
@@ -3475,7 +3687,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2a5b72b1-1027-4900-9a5e-45c156de9a5d")
-		(property "Reference" "#PWR032"
+		(property "Reference" "#PWR0213"
 			(at 153.67 96.52 0)
 			(effects
 				(font
@@ -3525,7 +3737,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR032")
+					(reference "#PWR0213")
 					(unit 1)
 				)
 			)
@@ -3540,7 +3752,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2ac18fb4-406d-4f31-b36d-424d46e890b1")
-		(property "Reference" "#PWR034"
+		(property "Reference" "#PWR0216"
 			(at 91.44 99.06 0)
 			(effects
 				(font
@@ -3590,7 +3802,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR034")
+					(reference "#PWR0216")
 					(unit 1)
 				)
 			)
@@ -3605,7 +3817,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2ed234fd-22eb-4036-a510-5e2192afc13a")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR0221"
 			(at 336.55 158.75 0)
 			(effects
 				(font
@@ -3655,7 +3867,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR020")
+					(reference "#PWR0221")
 					(unit 1)
 				)
 			)
@@ -3670,7 +3882,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3a26eaa7-7ee4-4065-926a-3b117573ba2c")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR0209"
 			(at 298.45 95.25 0)
 			(effects
 				(font
@@ -3720,7 +3932,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR015")
+					(reference "#PWR0209")
 					(unit 1)
 				)
 			)
@@ -3736,7 +3948,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3bcbd91a-3f6b-43a8-a482-d8c948611476")
-		(property "Reference" "U?"
+		(property "Reference" "U201"
 			(at 91.44 62.23 0)
 			(effects
 				(font
@@ -3779,6 +3991,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC PN" "C376005"
+			(at 91.44 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "TPS61230ARNSR"
+			(at 91.44 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "6892ca34-9e67-462c-aa54-2796486c2440")
 		)
@@ -3803,7 +4033,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "U?")
+					(reference "U201")
 					(unit 1)
 				)
 			)
@@ -3819,7 +4049,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "42bc11b4-dcca-4c55-a3d7-7f5f7a742e4f")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR0205"
 			(at 368.3 74.93 0)
 			(effects
 				(font
@@ -3871,7 +4101,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR013")
+					(reference "#PWR0205")
 					(unit 1)
 				)
 			)
@@ -3886,7 +4116,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4c4444fa-9a49-49bb-9db3-2e970d0fc63a")
-		(property "Reference" "C?"
+		(property "Reference" "C207"
 			(at 146.05 83.8199 0)
 			(effects
 				(font
@@ -3904,7 +4134,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 143.2052 88.9 0)
 			(effects
 				(font
@@ -3931,6 +4161,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC PN" "C14445"
+			(at 142.24 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL05A105KP5NNNC"
+			(at 142.24 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "81be23c0-e739-4154-88ae-deaf2d71a4dc")
 		)
@@ -3940,7 +4188,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "C?")
+					(reference "C207")
 					(unit 1)
 				)
 			)
@@ -3956,7 +4204,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4c54c03f-7528-49ab-acc2-1656265f7218")
-		(property "Reference" "D?"
+		(property "Reference" "D204"
 			(at 340.36 146.3674 90)
 			(effects
 				(font
@@ -4010,72 +4258,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "D?")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 45.72 80.01 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "566949d0-ec68-4745-bc32-7912664aad54")
-		(property "Reference" "#PWR029"
-			(at 45.72 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 45.72 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 45.72 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 45.72 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 45.72 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c0f76736-c26b-4c6f-bdc7-2423b95163a1")
-		)
-		(instances
-			(project "Lightsaber Power Core"
-				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR029")
+					(reference "D204")
 					(unit 1)
 				)
 			)
@@ -4090,7 +4273,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "571f9f5f-c5fe-416b-a834-825fa19d844e")
-		(property "Reference" "C?"
+		(property "Reference" "C210"
 			(at 127 85.0899 0)
 			(effects
 				(font
@@ -4108,7 +4291,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 124.1552 90.17 0)
 			(effects
 				(font
@@ -4135,6 +4318,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC PN" "C76946"
+			(at 123.19 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM1555C1H100JA01D"
+			(at 123.19 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b90dccb3-7ef7-4e72-8b51-4aa5805af645")
 		)
@@ -4144,7 +4345,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "C?")
+					(reference "C210")
 					(unit 1)
 				)
 			)
@@ -4160,7 +4361,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "59fcfa4d-a892-40c7-86ad-88f43075147d")
-		(property "Reference" "C?"
+		(property "Reference" "C212"
 			(at 123.19 156.2099 0)
 			(effects
 				(font
@@ -4178,7 +4379,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 126.0348 161.29 0)
 			(effects
 				(font
@@ -4205,6 +4406,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC PN" "C1705"
+			(at 127 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL10A475KP8NNNC"
+			(at 127 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2c885cea-70fa-4942-9101-666fb8641713")
 		)
@@ -4214,7 +4433,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "C?")
+					(reference "C212")
 					(unit 1)
 				)
 			)
@@ -4229,7 +4448,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5edcca25-6de8-407c-b7f1-be75138d2940")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR0211"
 			(at 368.3 95.25 0)
 			(effects
 				(font
@@ -4279,7 +4498,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR017")
+					(reference "#PWR0211")
 					(unit 1)
 				)
 			)
@@ -4294,7 +4513,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "682ab871-4777-4ef2-9f65-cd57cdd4cbcf")
-		(property "Reference" "C?"
+		(property "Reference" "C209"
 			(at 170.18 83.8199 0)
 			(effects
 				(font
@@ -4312,7 +4531,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 167.3352 88.9 0)
 			(effects
 				(font
@@ -4339,6 +4558,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC PN" "C2762594"
+			(at 166.37 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL10A226MO7JZNC"
+			(at 166.37 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f0131612-71d0-4396-9a48-867bf59c8e39")
 		)
@@ -4348,7 +4585,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "C?")
+					(reference "C209")
 					(unit 1)
 				)
 			)
@@ -4364,7 +4601,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "68c92394-5aa4-4e2d-83d0-c4aa9940496d")
-		(property "Reference" "C?"
+		(property "Reference" "C202"
 			(at 283.21 59.6899 0)
 			(effects
 				(font
@@ -4382,7 +4619,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 286.0548 64.77 0)
 			(effects
 				(font
@@ -4409,6 +4646,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC PN" "C1705"
+			(at 287.02 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL10A475KP8NNNC"
+			(at 287.02 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "699ea0fe-a322-4f25-99c8-277d9f1f237d")
 		)
@@ -4418,7 +4673,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "C?")
+					(reference "C202")
 					(unit 1)
 				)
 			)
@@ -4433,7 +4688,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "709d41f0-595a-4aba-b521-6aa5aec7a371")
-		(property "Reference" "L?"
+		(property "Reference" "L201"
 			(at 91.44 52.07 90)
 			(effects
 				(font
@@ -4520,7 +4775,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "L?")
+					(reference "L201")
 					(unit 1)
 				)
 			)
@@ -4536,7 +4791,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "742d70e4-127f-4cd2-8571-4d98c637fa58")
-		(property "Reference" "R?"
+		(property "Reference" "R204"
 			(at 114.3 97.7899 0)
 			(effects
 				(font
@@ -4554,7 +4809,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 110.744 98.806 90)
 			(effects
 				(font
@@ -4563,7 +4818,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://lcsc.com/datasheet/lcsc_datasheet_2506161046_YAGEO-RC0402FR-0710KL_C60490.pdf"
 			(at 111.76 99.06 0)
 			(effects
 				(font
@@ -4581,6 +4836,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC PN" "C60490"
+			(at 111.76 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-0710KL"
+			(at 111.76 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1a7f5bc2-9062-48b6-9132-7490950ac3f6")
 		)
@@ -4590,7 +4863,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "R?")
+					(reference "R204")
 					(unit 1)
 				)
 			)
@@ -4605,7 +4878,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "79d6258b-d82c-4136-a1f7-a417d0fe9a33")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR0224"
 			(at 127 170.18 0)
 			(effects
 				(font
@@ -4655,7 +4928,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR025")
+					(reference "#PWR0224")
 					(unit 1)
 				)
 			)
@@ -4670,7 +4943,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7a10dba4-c96c-4f64-9606-9e435ff68830")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR0208"
 			(at 336.55 87.63 0)
 			(effects
 				(font
@@ -4722,7 +4995,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR014")
+					(reference "#PWR0208")
 					(unit 1)
 				)
 			)
@@ -4737,7 +5010,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7d795eeb-e9bb-4fd5-8bf3-b4bbf2517fa1")
-		(property "Reference" "C?"
+		(property "Reference" "C204"
 			(at 62.23 73.6599 0)
 			(effects
 				(font
@@ -4755,7 +5028,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 59.3852 78.74 0)
 			(effects
 				(font
@@ -4782,6 +5055,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC PN" "C2762594"
+			(at 58.42 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL10A226MO7JZNC"
+			(at 58.42 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7250ad99-3d79-4a1d-a856-88767f45992b")
 		)
@@ -4791,7 +5082,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "C?")
+					(reference "C204")
 					(unit 1)
 				)
 			)
@@ -4806,7 +5097,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7df0f05d-6c2b-43ba-a63d-635ea80ca3f6")
-		(property "Reference" "C?"
+		(property "Reference" "C203"
 			(at 116.84 66.0399 0)
 			(effects
 				(font
@@ -4824,7 +5115,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 113.9952 71.12 0)
 			(effects
 				(font
@@ -4851,6 +5142,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC PN" "C15195"
+			(at 113.03 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL05B103KB5NNNC"
+			(at 113.03 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "55314dc3-ee39-4913-a48d-04fbb8890cb3")
 		)
@@ -4860,7 +5169,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "C?")
+					(reference "C203")
 					(unit 1)
 				)
 			)
@@ -4875,7 +5184,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "81ab6e42-a550-4135-ad42-3e9d002ef348")
-		(property "Reference" "#PWR030"
+		(property "Reference" "#PWR0207"
 			(at 58.42 86.36 0)
 			(effects
 				(font
@@ -4925,7 +5234,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR030")
+					(reference "#PWR0207")
 					(unit 1)
 				)
 			)
@@ -4941,7 +5250,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "84372755-d8ea-40f4-bc50-965e707bd1de")
-		(property "Reference" "D?"
+		(property "Reference" "D202"
 			(at 339.09 99.0599 90)
 			(effects
 				(font
@@ -4959,7 +5268,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-523"
 			(at 336.55 100.33 0)
 			(effects
 				(font
@@ -4968,7 +5277,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BAS716.pdf"
 			(at 336.55 100.33 0)
 			(effects
 				(font
@@ -5004,6 +5313,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC PN" "C282366"
+			(at 336.55 100.33 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "BAS716,115"
+			(at 336.55 100.33 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7e15bac8-2731-4450-bcdc-b41eaecfa172")
 		)
@@ -5013,7 +5340,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "D?")
+					(reference "D202")
 					(unit 1)
 				)
 			)
@@ -5029,7 +5356,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "89085005-591f-4fd4-87e2-bffe934d7cc1")
-		(property "Reference" "C?"
+		(property "Reference" "C205"
 			(at 356.87 81.2799 0)
 			(effects
 				(font
@@ -5047,7 +5374,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 354.0252 86.36 0)
 			(effects
 				(font
@@ -5074,6 +5401,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC PN" "C1705"
+			(at 353.06 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL10A475KP8NNNC"
+			(at 353.06 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "22990f33-5e41-4aac-b317-122d506110af")
 		)
@@ -5083,7 +5428,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "C?")
+					(reference "C205")
 					(unit 1)
 				)
 			)
@@ -5099,7 +5444,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "890dec91-7676-4e28-9dc6-bb8eaeb05421")
-		(property "Reference" "U?"
+		(property "Reference" "U202"
 			(at 300.6441 68.58 0)
 			(effects
 				(font
@@ -5146,6 +5491,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC PN" "C424093"
+			(at 298.45 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MCP73831T-2ACI/OT"
+			(at 298.45 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "bf57453a-f225-4e00-a752-8f585ad893c1")
 		)
@@ -5164,7 +5527,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "U?")
+					(reference "U202")
 					(unit 1)
 				)
 			)
@@ -5179,7 +5542,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "912cc995-232b-4d9c-bf91-995009e338d1")
-		(property "Reference" "C?"
+		(property "Reference" "C208"
 			(at 157.48 83.8199 0)
 			(effects
 				(font
@@ -5197,7 +5560,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 154.6352 88.9 0)
 			(effects
 				(font
@@ -5224,6 +5587,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC PN" "C2762594"
+			(at 153.67 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL10A226MO7JZNC"
+			(at 153.67 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ff5590b4-57dc-497f-84dd-dce047b1724e")
 		)
@@ -5233,7 +5614,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "C?")
+					(reference "C208")
 					(unit 1)
 				)
 			)
@@ -5249,7 +5630,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "944db68c-a9ab-4e10-9b62-1db84c100c7e")
-		(property "Reference" "D?"
+		(property "Reference" "D203"
 			(at 339.09 134.6199 90)
 			(effects
 				(font
@@ -5267,7 +5648,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-523"
 			(at 336.55 135.89 0)
 			(effects
 				(font
@@ -5276,7 +5657,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BAS716.pdf"
 			(at 336.55 135.89 0)
 			(effects
 				(font
@@ -5312,6 +5693,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC PN" "C282366"
+			(at 336.55 135.89 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "BAS716,115"
+			(at 336.55 135.89 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "38ad8308-a0c4-4062-aebd-3a2b291beef8")
 		)
@@ -5321,7 +5720,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "D?")
+					(reference "D203")
 					(unit 1)
 				)
 			)
@@ -5336,7 +5735,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "98f44cff-3f34-4e8f-8b2d-61ff9f977e82")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR0222"
 			(at 78.74 170.18 0)
 			(effects
 				(font
@@ -5386,7 +5785,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR023")
+					(reference "#PWR0222")
 					(unit 1)
 				)
 			)
@@ -5401,7 +5800,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9aabb4d4-5fc1-4cef-92f3-70ea73af9279")
-		(property "Reference" "#PWR0203"
+		(property "Reference" "#PWR0215"
 			(at 73.66 99.06 0)
 			(effects
 				(font
@@ -5451,7 +5850,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR0203")
+					(reference "#PWR0215")
 					(unit 1)
 				)
 			)
@@ -5467,7 +5866,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a0c92dd5-da41-4168-8359-e51934f67f3a")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR0219"
 			(at 78.74 146.05 0)
 			(effects
 				(font
@@ -5519,7 +5918,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR021")
+					(reference "#PWR0219")
 					(unit 1)
 				)
 			)
@@ -5535,7 +5934,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a1f63d97-301c-413a-aeee-797cfb7a95ba")
-		(property "Reference" "C?"
+		(property "Reference" "C211"
 			(at 74.93 156.2099 0)
 			(effects
 				(font
@@ -5553,7 +5952,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 77.7748 161.29 0)
 			(effects
 				(font
@@ -5580,6 +5979,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC PN" "C1705"
+			(at 78.74 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL10A475KP8NNNC"
+			(at 78.74 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "917239f6-b90d-4db9-806a-23be540bdfa6")
 		)
@@ -5589,7 +6006,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "C?")
+					(reference "C211")
 					(unit 1)
 				)
 			)
@@ -5604,7 +6021,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a89a6915-697e-41dc-8dd1-d30da80a02de")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR0210"
 			(at 353.06 95.25 0)
 			(effects
 				(font
@@ -5654,7 +6071,72 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR016")
+					(reference "#PWR0210")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 270.51 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a983b3e0-8268-4344-8697-9ab84e56766c")
+		(property "Reference" "#PWR0203"
+			(at 270.51 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 270.51 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 270.51 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 270.51 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 270.51 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dfff905d-95dd-4533-a07b-ba12363673bf")
+		)
+		(instances
+			(project "Lightsaber Power Core"
+				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
+					(reference "#PWR0203")
 					(unit 1)
 				)
 			)
@@ -5670,7 +6152,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ac72af9b-5927-4732-8475-08cf0115b98b")
-		(property "Reference" "U?"
+		(property "Reference" "U203"
 			(at 107.95 144.78 0)
 			(effects
 				(font
@@ -5723,6 +6205,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC PN" "C2688249"
+			(at 107.95 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "WL9005S5-33"
+			(at 107.95 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "13407e42-5b34-4158-aa52-761c97f6dbcd")
 		)
@@ -5741,7 +6241,95 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "U?")
+					(reference "U203")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 270.51 60.96 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "adc5232b-b356-4b4c-905e-f58791cd4f45")
+		(property "Reference" "C201"
+			(at 266.7 59.6899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4.7uF"
+			(at 266.7 62.2299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 269.5448 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 270.51 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 270.51 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C1705"
+			(at 270.51 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL10A475KP8NNNC"
+			(at 270.51 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "37850d17-d5d8-4573-bed9-d329cbce38e3")
+		)
+		(pin "2"
+			(uuid "f1d0d6ec-964c-453d-8b92-7397ed36b0fd")
+		)
+		(instances
+			(project "Lightsaber Power Core"
+				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
+					(reference "C201")
 					(unit 1)
 				)
 			)
@@ -5756,7 +6344,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ae05cfd6-d832-4190-80d0-4d4eb583bbe8")
-		(property "Reference" "#PWR033"
+		(property "Reference" "#PWR0214"
 			(at 166.37 96.52 0)
 			(effects
 				(font
@@ -5806,7 +6394,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR033")
+					(reference "#PWR0214")
 					(unit 1)
 				)
 			)
@@ -5822,7 +6410,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "aee0d5c7-bc41-4f70-a0b0-25954fb7684a")
-		(property "Reference" "C?"
+		(property "Reference" "C206"
 			(at 372.11 81.2799 0)
 			(effects
 				(font
@@ -5840,7 +6428,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 369.2652 86.36 0)
 			(effects
 				(font
@@ -5867,6 +6455,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC PN" "C1705"
+			(at 368.3 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL10A475KP8NNNC"
+			(at 368.3 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d993791c-8514-4c58-b8ba-3889532d0bbb")
 		)
@@ -5876,7 +6482,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "C?")
+					(reference "C206")
 					(unit 1)
 				)
 			)
@@ -5892,7 +6498,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b64c9e60-c3a3-4889-8a80-60c3465405e1")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR0201"
 			(at 298.45 50.8 0)
 			(effects
 				(font
@@ -5944,7 +6550,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR07")
+					(reference "#PWR0201")
 					(unit 1)
 				)
 			)
@@ -5952,7 +6558,7 @@
 	)
 	(symbol
 		(lib_id "irex_Power:VCC_bar")
-		(at 45.72 57.15 0)
+		(at 58.42 57.15 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5960,8 +6566,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bc41a866-7b2a-48e9-b440-6807fd537d9b")
-		(property "Reference" "#PWR027"
-			(at 45.72 60.96 0)
+		(property "Reference" "#PWR0202"
+			(at 58.42 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5970,7 +6576,7 @@
 			)
 		)
 		(property "Value" "VBAT"
-			(at 45.72 55.372 0)
+			(at 58.42 55.372 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -5980,7 +6586,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 45.72 57.15 0)
+			(at 58.42 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5989,7 +6595,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 45.72 57.15 0)
+			(at 58.42 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5998,7 +6604,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC_bar\""
-			(at 45.72 62.992 0)
+			(at 58.42 62.992 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6012,7 +6618,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR027")
+					(reference "#PWR0202")
 					(unit 1)
 				)
 			)
@@ -6028,7 +6634,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bdade78d-d123-44d0-95f8-8f895c6d29e1")
-		(property "Reference" "R?"
+		(property "Reference" "R203"
 			(at 283.21 88.8999 0)
 			(effects
 				(font
@@ -6046,7 +6652,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 284.734 90.424 90)
 			(effects
 				(font
@@ -6055,7 +6661,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://lcsc.com/datasheet/lcsc_datasheet_2506161050_YAGEO-RC0402FR-072KL_C60488.pdf"
 			(at 285.75 90.17 0)
 			(effects
 				(font
@@ -6065,6 +6671,24 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 285.75 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C60488"
+			(at 285.75 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-072KL"
 			(at 285.75 90.17 0)
 			(effects
 				(font
@@ -6082,76 +6706,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "R?")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 45.72 74.93 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c1cce042-3050-4743-b066-2f1990cc5fc2")
-		(property "Reference" "C?"
-			(at 49.53 73.6599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "22uF"
-			(at 49.53 76.1999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 46.6852 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 45.72 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 45.72 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "05aa7640-f8d5-4bd8-b845-603c172910b6")
-		)
-		(pin "2"
-			(uuid "066e1a03-ae59-4adb-a961-57f85a8dfcea")
-		)
-		(instances
-			(project "Lightsaber Power Core"
-				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "C?")
+					(reference "R203")
 					(unit 1)
 				)
 			)
@@ -6167,7 +6722,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c7610d25-1d68-466e-911f-5f5c258f2895")
-		(property "Reference" "R?"
+		(property "Reference" "R201"
 			(at 76.2 85.0899 0)
 			(effects
 				(font
@@ -6185,7 +6740,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 72.644 86.106 90)
 			(effects
 				(font
@@ -6194,7 +6749,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://lcsc.com/datasheet/lcsc_datasheet_2506161046_YAGEO-RC0402FR-0710KL_C60490.pdf"
 			(at 73.66 86.36 0)
 			(effects
 				(font
@@ -6212,6 +6767,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC PN" "C60490"
+			(at 73.66 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-0710KL"
+			(at 73.66 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "373dd25b-e404-4133-8bf0-33df3efc99ce")
 		)
@@ -6221,7 +6794,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "R?")
+					(reference "R201")
 					(unit 1)
 				)
 			)
@@ -6236,7 +6809,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cdf8e7da-50fb-4b9d-98cd-8c16cf6d0d3f")
-		(property "Reference" "#PWR036"
+		(property "Reference" "#PWR0218"
 			(at 111.76 110.49 0)
 			(effects
 				(font
@@ -6286,7 +6859,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR036")
+					(reference "#PWR0218")
 					(unit 1)
 				)
 			)
@@ -6302,7 +6875,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e325fb28-96f9-421e-b982-964b8011fedc")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR0206"
 			(at 172.72 77.47 0)
 			(effects
 				(font
@@ -6354,7 +6927,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR028")
+					(reference "#PWR0206")
 					(unit 1)
 				)
 			)
@@ -6370,7 +6943,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e518fa62-bad7-4d8b-bd30-c139b58ab8d3")
-		(property "Reference" "R?"
+		(property "Reference" "R205"
 			(at 339.09 110.4899 0)
 			(effects
 				(font
@@ -6388,7 +6961,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 335.534 111.506 90)
 			(effects
 				(font
@@ -6397,7 +6970,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://lcsc.com/datasheet/lcsc_datasheet_2506161046_YAGEO-RC0402FR-0710KL_C60490.pdf"
 			(at 336.55 111.76 0)
 			(effects
 				(font
@@ -6415,6 +6988,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC PN" "C60490"
+			(at 336.55 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-0710KL"
+			(at 336.55 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "cd030bf6-6e06-46c4-9316-a04e2eed86c6")
 		)
@@ -6424,7 +7015,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "R?")
+					(reference "R205")
 					(unit 1)
 				)
 			)
@@ -6439,7 +7030,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e95e3359-bd97-4ed4-9e62-8a6967e3b2b8")
-		(property "Reference" "#PWR031"
+		(property "Reference" "#PWR0212"
 			(at 142.24 96.52 0)
 			(effects
 				(font
@@ -6489,7 +7080,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR031")
+					(reference "#PWR0212")
 					(unit 1)
 				)
 			)
@@ -6505,7 +7096,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ec803fa2-8065-4167-966a-fb357938d82b")
-		(property "Reference" "D?"
+		(property "Reference" "D201"
 			(at 340.36 90.4874 90)
 			(effects
 				(font
@@ -6550,6 +7141,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC PN" "C965845"
+			(at 336.55 90.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "XL-2012SURUGC"
+			(at 336.55 90.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "a3dab5f6-ac3e-4c38-8618-fdc80697d8b7")
 		)
@@ -6559,7 +7168,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "D?")
+					(reference "D201")
 					(unit 1)
 				)
 			)
@@ -6575,7 +7184,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f49af2b5-6463-4c5c-9ffc-10e41f3c372e")
-		(property "Reference" "R?"
+		(property "Reference" "R206"
 			(at 339.09 123.1899 0)
 			(effects
 				(font
@@ -6593,7 +7202,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 335.534 124.206 90)
 			(effects
 				(font
@@ -6602,7 +7211,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://lcsc.com/datasheet/lcsc_datasheet_2506161046_YAGEO-RC0402FR-0710KL_C60490.pdf"
 			(at 336.55 124.46 0)
 			(effects
 				(font
@@ -6612,6 +7221,24 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 336.55 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C60490"
+			(at 336.55 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-0710KL"
 			(at 336.55 124.46 0)
 			(effects
 				(font
@@ -6629,7 +7256,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "R?")
+					(reference "R206")
 					(unit 1)
 				)
 			)
@@ -6645,7 +7272,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f5ee3d11-be56-4f04-97b5-2c7ec181c23a")
-		(property "Reference" "R?"
+		(property "Reference" "R202"
 			(at 114.3 85.0899 0)
 			(effects
 				(font
@@ -6663,7 +7290,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 110.744 86.106 90)
 			(effects
 				(font
@@ -6672,7 +7299,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://lcsc.com/datasheet/lcsc_datasheet_2506161200_YAGEO-RT0402BRD0732K4L_C852723.pdf"
 			(at 111.76 86.36 0)
 			(effects
 				(font
@@ -6690,6 +7317,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC PN" "C852723"
+			(at 111.76 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RT0402BRD0732K4L"
+			(at 111.76 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "df662e9d-8154-471f-90de-7e08e2eca0cc")
 		)
@@ -6699,7 +7344,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "R?")
+					(reference "R202")
 					(unit 1)
 				)
 			)
@@ -6707,7 +7352,7 @@
 	)
 	(symbol
 		(lib_id "irex_Power:VCC_Arrow")
-		(at 127 147.32 0)
+		(at 127 144.78 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6715,8 +7360,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f8cc2074-ba03-46d4-b4c3-07d36450f779")
-		(property "Reference" "#PWR022"
-			(at 127 151.13 0)
+		(property "Reference" "#PWR0220"
+			(at 127 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6725,7 +7370,7 @@
 			)
 		)
 		(property "Value" "3.3V"
-			(at 127 144.272 0)
+			(at 127 141.732 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -6735,7 +7380,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 127 147.32 0)
+			(at 127 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6744,7 +7389,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 127 147.32 0)
+			(at 127 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6753,7 +7398,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC_Arrow\""
-			(at 127 153.162 0)
+			(at 127 150.622 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6767,7 +7412,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR022")
+					(reference "#PWR0220")
 					(unit 1)
 				)
 			)
@@ -6782,7 +7427,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "fe946eb0-53be-4a9b-895c-e2e8b5c6ed23")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR0217"
 			(at 285.75 102.87 0)
 			(effects
 				(font
@@ -6832,7 +7477,7 @@
 		(instances
 			(project "Lightsaber Power Core"
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "#PWR019")
+					(reference "#PWR0217")
 					(unit 1)
 				)
 			)
