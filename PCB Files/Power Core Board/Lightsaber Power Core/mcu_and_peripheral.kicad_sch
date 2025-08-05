@@ -2556,7 +2556,7 @@
 						(type none)
 					)
 				)
-				(pin passive line
+				(pin free line
 					(at 0 0 0)
 					(length 0)
 					(name "OUT"
@@ -8054,7 +8054,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm"
 			(at 166.37 43.18 0)
 			(effects
 				(font
@@ -10140,7 +10140,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 81.28 132.08 0)
 			(effects
 				(font
@@ -10369,7 +10369,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 81.28 121.92 0)
 			(effects
 				(font
@@ -10832,7 +10832,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 81.28 134.62 0)
 			(effects
 				(font
@@ -11410,7 +11410,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm"
 			(at 128.27 43.18 0)
 			(effects
 				(font
@@ -11797,7 +11797,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 81.28 144.78 0)
 			(effects
 				(font
@@ -13294,7 +13294,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 170.18 109.22 0)
 			(effects
 				(font
@@ -13382,6 +13382,15 @@
 		)
 		(property "Description" "A visual indicator for local scope nets"
 			(at 81.28 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" ""
+			(at 81.28 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13564,7 +13573,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 81.28 104.14 0)
 			(effects
 				(font
@@ -13698,7 +13707,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 81.28 116.84 0)
 			(effects
 				(font
@@ -14564,7 +14573,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 81.28 124.46 0)
 			(effects
 				(font

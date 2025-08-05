@@ -656,180 +656,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:LED_Filled"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "LED_Filled"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Light emitting diode, filled shape"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "LED diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "LED_Filled_0_1"
-				(polyline
-					(pts
-						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy 1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-			)
-			(symbol "LED_Filled_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:R_US"
 			(pin_numbers
 				(hide yes)
@@ -993,6 +819,246 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "irex_LED:LED_RG_XINGLIGHT_XL-2012SURUGC"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at -1.27 4.572 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Red, Green"
+				(at 0.508 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "irex_LED_SMD:LED_RG_XINGLIGHT_XL-2012SURUGC"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://lcsc.com/datasheet/lcsc_datasheet_2504101957_XINGLIGHT-XL-2012SURUGC_C965845.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "LED, Red/Green, 20mA, 0805"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "MPN" "XL-2012SURUGC"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "LED red green"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LED_RG_XINGLIGHT_XL-2012SURUGC_0_1"
+				(polyline
+					(pts
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.778 3.175)
+					(end 1.905 -1.905)
+					(stroke
+						(width 0)
+						(type dot)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "LED_RG_XINGLIGHT_XL-2012SURUGC_1_1"
+				(text "R"
+					(at 0 2.032 900)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "LED_RG_XINGLIGHT_XL-2012SURUGC_2_1"
+				(text "G"
+					(at -0.127 2.032 900)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1544,7 +1610,7 @@
 						)
 					)
 				)
-				(pin power_in line
+				(pin open_collector line
 					(at 10.16 7.62 180)
 					(length 2.54)
 					(name "SW"
@@ -2152,7 +2218,7 @@
 	)
 	(text_box "Extra diodes and resistors to handle the High-Z state. Both LEDs will be slightly illuminated when STAT pin is High-Z"
 		(exclude_from_sim no)
-		(at 345.44 112.395 0)
+		(at 344.17 118.745 0)
 		(size 33.655 11.43)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -2255,7 +2321,7 @@
 		(uuid "2082f731-923f-409d-b293-10643846f2d9")
 	)
 	(junction
-		(at 336.55 118.11)
+		(at 335.28 124.46)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "76f8a189-5ccd-410a-8646-5d2f1df1e6d1")
@@ -2534,7 +2600,7 @@
 	)
 	(wire
 		(pts
-			(xy 336.55 83.82) (xy 336.55 86.36)
+			(xy 335.28 90.17) (xy 335.28 92.71)
 		)
 		(stroke
 			(width 0)
@@ -2554,7 +2620,7 @@
 	)
 	(wire
 		(pts
-			(xy 312.42 81.28) (xy 312.42 118.11)
+			(xy 312.42 81.28) (xy 312.42 124.46)
 		)
 		(stroke
 			(width 0)
@@ -2604,7 +2670,7 @@
 	)
 	(wire
 		(pts
-			(xy 336.55 93.98) (xy 336.55 96.52)
+			(xy 335.28 100.33) (xy 335.28 102.87)
 		)
 		(stroke
 			(width 0)
@@ -2634,7 +2700,7 @@
 	)
 	(wire
 		(pts
-			(xy 336.55 128.27) (xy 336.55 132.08)
+			(xy 335.28 134.62) (xy 335.28 138.43)
 		)
 		(stroke
 			(width 0)
@@ -2734,7 +2800,7 @@
 	)
 	(wire
 		(pts
-			(xy 312.42 118.11) (xy 336.55 118.11)
+			(xy 312.42 124.46) (xy 335.28 124.46)
 		)
 		(stroke
 			(width 0)
@@ -2764,7 +2830,7 @@
 	)
 	(wire
 		(pts
-			(xy 336.55 118.11) (xy 336.55 120.65)
+			(xy 335.28 124.46) (xy 335.28 127)
 		)
 		(stroke
 			(width 0)
@@ -2914,7 +2980,7 @@
 	)
 	(wire
 		(pts
-			(xy 336.55 118.11) (xy 336.55 115.57)
+			(xy 335.28 124.46) (xy 335.28 121.92)
 		)
 		(stroke
 			(width 0)
@@ -2924,7 +2990,7 @@
 	)
 	(wire
 		(pts
-			(xy 336.55 149.86) (xy 336.55 152.4)
+			(xy 335.28 156.21) (xy 335.28 158.75)
 		)
 		(stroke
 			(width 0)
@@ -3034,7 +3100,7 @@
 	)
 	(wire
 		(pts
-			(xy 336.55 139.7) (xy 336.55 142.24)
+			(xy 335.28 146.05) (xy 335.28 148.59)
 		)
 		(stroke
 			(width 0)
@@ -3314,7 +3380,7 @@
 	)
 	(wire
 		(pts
-			(xy 336.55 104.14) (xy 336.55 107.95)
+			(xy 335.28 110.49) (xy 335.28 114.3)
 		)
 		(stroke
 			(width 0)
@@ -3810,7 +3876,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 336.55 152.4 0)
+		(at 335.28 158.75 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3818,7 +3884,7 @@
 		(dnp no)
 		(uuid "2ed234fd-22eb-4036-a510-5e2192afc13a")
 		(property "Reference" "#PWR0221"
-			(at 336.55 158.75 0)
+			(at 335.28 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3827,7 +3893,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 336.55 156.21 0)
+			(at 335.28 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3835,7 +3901,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 336.55 152.4 0)
+			(at 335.28 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3844,7 +3910,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 336.55 152.4 0)
+			(at 335.28 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3853,7 +3919,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 336.55 152.4 0)
+			(at 335.28 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4195,17 +4261,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_Filled")
-		(at 336.55 146.05 90)
-		(unit 1)
+		(lib_id "irex_LED:LED_RG_XINGLIGHT_XL-2012SURUGC")
+		(at 335.28 152.4 90)
+		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "4c54c03f-7528-49ab-acc2-1656265f7218")
-		(property "Reference" "D204"
-			(at 340.36 146.3674 90)
+		(uuid "51a5c34e-c127-49d7-a995-15eb2e0bdabe")
+		(property "Reference" "D201"
+			(at 339.09 152.4634 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4213,8 +4279,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Green"
-			(at 340.36 148.9074 90)
+		(property "Value" "XL-2012SURUGC"
+			(at 339.09 155.0034 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4222,8 +4288,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 336.55 146.05 0)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 335.28 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4231,8 +4297,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 336.55 146.05 0)
+		(property "Datasheet" "https://lcsc.com/datasheet/lcsc_datasheet_2504101957_XINGLIGHT-XL-2012SURUGC_C965845.pdf"
+			(at 335.28 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4240,8 +4306,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Light emitting diode, filled shape"
-			(at 336.55 146.05 0)
+		(property "Description" "LED, Red/Green, 20mA, 0805"
+			(at 335.28 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4249,17 +4315,41 @@
 				(hide yes)
 			)
 		)
-		(pin "2"
-			(uuid "aa7989eb-b84b-4917-bfdc-6d2757441720")
+		(property "MPN" "XL-2012SURUGC"
+			(at 335.28 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C965845"
+			(at 335.28 152.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
 		(pin "1"
-			(uuid "fa925ca3-8676-4231-ac57-c6ec67ad5bec")
+			(uuid "d6258099-ed4d-4af3-850a-789603e53d14")
+		)
+		(pin "3"
+			(uuid "1ab89608-590f-4ecb-a06d-c3024b16de97")
+		)
+		(pin "4"
+			(uuid "1326d50f-f0a7-45d2-87aa-b4ad85bc0321")
+		)
+		(pin "2"
+			(uuid "520ba691-779d-4719-a337-20d783eaede7")
 		)
 		(instances
-			(project "Lightsaber Power Core"
+			(project ""
 				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "D204")
-					(unit 1)
+					(reference "D201")
+					(unit 2)
 				)
 			)
 		)
@@ -4870,6 +4960,100 @@
 		)
 	)
 	(symbol
+		(lib_id "irex_LED:LED_RG_XINGLIGHT_XL-2012SURUGC")
+		(at 335.28 96.52 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "79343d8d-79d6-4ab5-9061-234f916030d6")
+		(property "Reference" "D201"
+			(at 339.09 96.5834 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "XL-2012SURUGC"
+			(at 339.09 99.1234 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 335.28 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/datasheet/lcsc_datasheet_2504101957_XINGLIGHT-XL-2012SURUGC_C965845.pdf"
+			(at 335.28 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "LED, Red/Green, 20mA, 0805"
+			(at 335.28 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "XL-2012SURUGC"
+			(at 335.28 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C965845"
+			(at 335.28 96.52 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d6258099-ed4d-4af3-850a-789603e53d15")
+		)
+		(pin "3"
+			(uuid "1ab89608-590f-4ecb-a06d-c3024b16de98")
+		)
+		(pin "4"
+			(uuid "1326d50f-f0a7-45d2-87aa-b4ad85bc0322")
+		)
+		(pin "2"
+			(uuid "520ba691-779d-4719-a337-20d783eaede8")
+		)
+		(instances
+			(project ""
+				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
+					(reference "D201")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 127 163.83 0)
 		(unit 1)
@@ -4936,7 +5120,7 @@
 	)
 	(symbol
 		(lib_id "irex_Power:VCC_bar")
-		(at 336.55 83.82 0)
+		(at 335.28 90.17 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4944,7 +5128,7 @@
 		(dnp no)
 		(uuid "7a10dba4-c96c-4f64-9606-9e435ff68830")
 		(property "Reference" "#PWR0208"
-			(at 336.55 87.63 0)
+			(at 335.28 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4953,7 +5137,7 @@
 			)
 		)
 		(property "Value" "VBUS"
-			(at 336.55 82.042 0)
+			(at 335.28 88.392 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -4963,7 +5147,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 336.55 83.82 0)
+			(at 335.28 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4972,7 +5156,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 336.55 83.82 0)
+			(at 335.28 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4981,7 +5165,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC_bar\""
-			(at 336.55 89.662 0)
+			(at 335.28 96.012 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5242,7 +5426,7 @@
 	)
 	(symbol
 		(lib_id "Device:D_Filled")
-		(at 336.55 100.33 90)
+		(at 335.28 106.68 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5251,7 +5435,7 @@
 		(fields_autoplaced yes)
 		(uuid "84372755-d8ea-40f4-bc50-965e707bd1de")
 		(property "Reference" "D202"
-			(at 339.09 99.0599 90)
+			(at 337.82 105.4099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5260,7 +5444,7 @@
 			)
 		)
 		(property "Value" "D_Filled"
-			(at 339.09 101.5999 90)
+			(at 337.82 107.9499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5269,7 +5453,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-523"
-			(at 336.55 100.33 0)
+			(at 335.28 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5278,7 +5462,7 @@
 			)
 		)
 		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BAS716.pdf"
-			(at 336.55 100.33 0)
+			(at 335.28 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5287,7 +5471,7 @@
 			)
 		)
 		(property "Description" "Diode, filled shape"
-			(at 336.55 100.33 0)
+			(at 335.28 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5296,7 +5480,7 @@
 			)
 		)
 		(property "Sim.Device" "D"
-			(at 336.55 100.33 0)
+			(at 335.28 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5305,7 +5489,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 336.55 100.33 0)
+			(at 335.28 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5314,7 +5498,7 @@
 			)
 		)
 		(property "LCSC PN" "C282366"
-			(at 336.55 100.33 90)
+			(at 335.28 106.68 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5323,7 +5507,7 @@
 			)
 		)
 		(property "MPN" "BAS716,115"
-			(at 336.55 100.33 90)
+			(at 335.28 106.68 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5622,7 +5806,7 @@
 	)
 	(symbol
 		(lib_id "Device:D_Filled")
-		(at 336.55 135.89 90)
+		(at 335.28 142.24 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5631,7 +5815,7 @@
 		(fields_autoplaced yes)
 		(uuid "944db68c-a9ab-4e10-9b62-1db84c100c7e")
 		(property "Reference" "D203"
-			(at 339.09 134.6199 90)
+			(at 337.82 140.9699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5640,7 +5824,7 @@
 			)
 		)
 		(property "Value" "D_Filled"
-			(at 339.09 137.1599 90)
+			(at 337.82 143.5099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5649,7 +5833,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-523"
-			(at 336.55 135.89 0)
+			(at 335.28 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5658,7 +5842,7 @@
 			)
 		)
 		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BAS716.pdf"
-			(at 336.55 135.89 0)
+			(at 335.28 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5667,7 +5851,7 @@
 			)
 		)
 		(property "Description" "Diode, filled shape"
-			(at 336.55 135.89 0)
+			(at 335.28 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5676,7 +5860,7 @@
 			)
 		)
 		(property "Sim.Device" "D"
-			(at 336.55 135.89 0)
+			(at 335.28 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5685,7 +5869,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 336.55 135.89 0)
+			(at 335.28 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5694,7 +5878,7 @@
 			)
 		)
 		(property "LCSC PN" "C282366"
-			(at 336.55 135.89 90)
+			(at 335.28 142.24 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5703,7 +5887,7 @@
 			)
 		)
 		(property "MPN" "BAS716,115"
-			(at 336.55 135.89 90)
+			(at 335.28 142.24 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6935,7 +7119,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 336.55 111.76 180)
+		(at 335.28 118.11 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6944,7 +7128,7 @@
 		(fields_autoplaced yes)
 		(uuid "e518fa62-bad7-4d8b-bd30-c139b58ab8d3")
 		(property "Reference" "R205"
-			(at 339.09 110.4899 0)
+			(at 337.82 116.8399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6953,7 +7137,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 339.09 113.0299 0)
+			(at 337.82 119.3799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6962,7 +7146,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 335.534 111.506 90)
+			(at 334.264 117.856 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6971,7 +7155,7 @@
 			)
 		)
 		(property "Datasheet" "https://lcsc.com/datasheet/lcsc_datasheet_2506161046_YAGEO-RC0402FR-0710KL_C60490.pdf"
-			(at 336.55 111.76 0)
+			(at 335.28 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6980,7 +7164,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 336.55 111.76 0)
+			(at 335.28 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6989,7 +7173,7 @@
 			)
 		)
 		(property "LCSC PN" "C60490"
-			(at 336.55 111.76 0)
+			(at 335.28 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6998,7 +7182,7 @@
 			)
 		)
 		(property "MPN" "RC0402FR-0710KL"
-			(at 336.55 111.76 0)
+			(at 335.28 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7087,96 +7271,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_Filled")
-		(at 336.55 90.17 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ec803fa2-8065-4167-966a-fb357938d82b")
-		(property "Reference" "D201"
-			(at 340.36 90.4874 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "Orange"
-			(at 340.36 93.0274 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 336.55 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 336.55 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode, filled shape"
-			(at 336.55 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC PN" "C965845"
-			(at 336.55 90.17 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MPN" "XL-2012SURUGC"
-			(at 336.55 90.17 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "a3dab5f6-ac3e-4c38-8618-fdc80697d8b7")
-		)
-		(pin "1"
-			(uuid "9f60cd8e-86fb-40a9-95e2-99c882d5f5a1")
-		)
-		(instances
-			(project "Lightsaber Power Core"
-				(path "/c6e6b272-1bb8-4e40-beee-59a44bd978ba/edf70b75-8609-4ebb-b0e3-841edf5227ef"
-					(reference "D201")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_US")
-		(at 336.55 124.46 180)
+		(at 335.28 130.81 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7185,7 +7281,7 @@
 		(fields_autoplaced yes)
 		(uuid "f49af2b5-6463-4c5c-9ffc-10e41f3c372e")
 		(property "Reference" "R206"
-			(at 339.09 123.1899 0)
+			(at 337.82 129.5399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7194,7 +7290,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 339.09 125.7299 0)
+			(at 337.82 132.0799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7203,7 +7299,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 335.534 124.206 90)
+			(at 334.264 130.556 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7212,7 +7308,7 @@
 			)
 		)
 		(property "Datasheet" "https://lcsc.com/datasheet/lcsc_datasheet_2506161046_YAGEO-RC0402FR-0710KL_C60490.pdf"
-			(at 336.55 124.46 0)
+			(at 335.28 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7221,7 +7317,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 336.55 124.46 0)
+			(at 335.28 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7230,7 +7326,7 @@
 			)
 		)
 		(property "LCSC PN" "C60490"
-			(at 336.55 124.46 0)
+			(at 335.28 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7239,7 +7335,7 @@
 			)
 		)
 		(property "MPN" "RC0402FR-0710KL"
-			(at 336.55 124.46 0)
+			(at 335.28 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
